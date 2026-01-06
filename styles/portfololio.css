@@ -1,8 +1,19 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
+body {
+    margin: 0;
+    padding: 0;
+    /* match header background so any tiny gap doesn't show white */
+    background-color: #FFF8F3;
+}
+
+img {
+  display: block;
+}
+
 /*shard style*/
 
 .font-open-sans{
@@ -17,7 +28,7 @@
 
 }
 .color-orange{
-    color: #FD6E0A;
+    color: #ff7b1d;
 }
 
 .btn{
@@ -32,7 +43,7 @@
 }
 
 .section-heading{
-    max-width 827px; 
+    max-width: 827px;
     text-align: center;
 }
 .section-heading h2{
@@ -52,15 +63,15 @@ header{
     background: url("../images/developer.png") , url("../images/header_bg.png"), #FFF8F3;
     background-position: top left, bottom right;
     background-repeat: no-repeat;
-    padding: 2px;
-
+    padding: auto;
 }
 
 nav{
     width: 60%;
     max-width: 1140px;
     /*border:1px solid red;*/
-    margin: 20px auto;
+    margin: 0 auto; /* remove top margin so header sits flush to top */
+    padding: 20px 0; /* keep vertical spacing inside nav */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,6 +123,7 @@ nav .menu a{
 #banner .banner-image img{
     max-width: 1200px;
     vertical-align: middle;
+    
 }
 
 #About {
