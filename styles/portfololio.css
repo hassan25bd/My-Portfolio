@@ -25,14 +25,48 @@ img {
 }
 
 .btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
     background-color: #FD6E0A;
-    border:none;
-    padding: 18px 30px;
-    border-radius: 5px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #FFF8F3;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
     cursor: pointer;
+    box-shadow: 0 6px 18px rgba(253,110,10,0.18);
+}
+
+/* outline variant (white background, orange border/text) */
+.btn-outline{
+    background: transparent;
+    color: #FD6E0A;
+    border: 2px solid #FD6E0A;
+    box-shadow: none;
+}
+
+/* icon inside button */
+.btn-icon{
+    display:inline-flex;
+    width:20px;
+    height:20px;
+    align-items:center;
+    justify-content:center;
+    transition-duration: .3s;
+}
+.btn-icon svg{ width:20px; height:20px; display:block; color:inherit; }
+/* font-awesome icon sizing when using <i> */
+.btn i{
+    font-size:18px;
+    line-height:1;
+    display:inline-block;
+}
+
+/* small horizontal gap between adjacent buttons */
+.btn + .btn{
+    margin-left: 12px;
 }
 
 .section-heading{
@@ -50,12 +84,16 @@ img {
     line-height: 30px;
     color: #757575;
 }
+
+.text-center{
+    text-align: center;
+}
 /*main style*/
 
 header{
     background-color: #FFF8F3;
     background: url("../images/developer.png") , url("../images/header_bg.png"), #FFF8F3;
-    background-position: top left, bottom right;
+    background-position: 23px 38px, bottom right;
     background-repeat: no-repeat;
     padding: auto;
 }
@@ -229,3 +267,79 @@ nav .menu a{
     color: #757575;
 }
 
+footer{
+    margin-top: 130px;
+    background-color: #FFF8F3;
+    padding: 130px 0;
+}
+
+/* Footer / Contact section */
+.footer-container{
+    width: 60%;
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    gap: 116px;
+}
+
+.footer-container .social{
+    max-width: 562px;
+    flex: 1;
+}
+
+.footer-container .social p{
+    color: #474747;
+    line-height: 18px;
+    margin-bottom: 30px;
+}
+.footer-container h2{
+    color: #181818;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.footer-container .icons{
+    display: flex;
+    gap: 28px; /* increased spacing between social icons */
+    margin-top: 22px;
+}
+.footer-container .icons a img{
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+.footer-container .form{
+    flex: 1;
+    max-width: 420px;
+}
+.footer-container .form h2{
+    margin-top: 0;
+}
+.footer-container .form .form-row{
+    margin-bottom: 18px;
+}
+.footer-container input[type="text"],
+.footer-container input[type="email"],
+.footer-container textarea{
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,0.06);
+    background: #fff;
+    font-size: 14px;
+    resize: vertical;
+}
+.footer-container textarea{
+    min-height: 120px;
+}
+.footer-container .btn{
+    padding: 12px 26px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+@media (max-width: 900px){
+    .footer-container{ flex-direction: column; padding: 0 24px; }
+    .footer-container .form{ max-width: 100%; }
+}
