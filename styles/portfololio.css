@@ -3,13 +3,6 @@
     padding: 0px;
     box-sizing: border-box;
 }
-body {
-    margin: 0;
-    padding: 0;
-    /* match header background so any tiny gap doesn't show white */
-    background-color: #FFF8F3;
-}
-
 img {
   display: block;
 }
@@ -45,6 +38,7 @@ img {
 .section-heading{
     max-width: 827px;
     text-align: center;
+    margin: 0 auto;
 }
 .section-heading h2{
     font-weight: 35px;
@@ -130,12 +124,15 @@ nav .menu a{
     padding: 130px;
 }
 #About .about-container{
-    width: 60%;
+    /* increase width to reduce large side whitespace shown in screenshot */
+    width: 80%;
     max-width: 1140px;
     margin: 0 auto;
     text-align: center;
     background-color: #FFF8F3;
-    padding: 131px 157px;
+    /* reduce horizontal padding to allow wider content area while keeping generous vertical spacing */
+    padding: 100px 80px;
+    border-radius: 2px;
 }
 #About .about-container .about-info{
     display: flex;
@@ -149,4 +146,46 @@ nav .menu a{
 }
 .about-info .info-card h4{
     font-size: 20px; 
+}
+
+/* Skills section */
+#skills{
+    padding-top: 130px;
+}
+
+/* ensure selector matches HTML id (lowercase) and center content */
+#skills .skills-container{
+    width: 61%;
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#skills .skills-container .skill-box{
+    display: flex;
+    gap: 24px;
+}
+
+.skill-box .skill-card{
+    padding: 30px;
+    /*border: 1px solid black;*/
+    max-width: 267px; 
+    box-shadow: 0 6px 50px 0 #00000048;
+}
+
+.skill-card img{
+   max-width: 44px;
+   margin-bottom: 30px; 
+}
+
+.skill-card h3{
+    font-size: 20px;
+    color: #181818;
+    margin-bottom: 20px;
+}
+
+.skill-card p{
+    font-size: 16px;
+    color: #757575;
+    line-height: 28px;
 }
